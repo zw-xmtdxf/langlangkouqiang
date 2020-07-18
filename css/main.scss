@@ -1,0 +1,342 @@
+@charset "UTF-8";
+@import 'sassConfig';
+
+#slide-wrap{
+    overflow: hidden;
+    position: relative;
+}
+.slide-next,.slide-prev{
+    top: 50%;
+    margin-top: -25px;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    i{
+        font-size: 50px;
+        color: #a0a0a0;
+    }
+}
+.slide-next{right: 20px;}
+.slide-prev{left: 20px;}
+
+.slide-content{
+    left: 0;
+    transition: all .5s 0s ease;
+    position: relative;
+    li{
+        float: left;
+
+    } 
+}
+.slide-nav{
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: 2;
+    bottom: 15px;
+    text-align: center;
+    font-size: 0;
+    a{
+        display: inline-block;
+        width: 8px;
+        height: 3px;
+        margin: 0 3px;
+        background-color: #FFF;
+        opacity: 0.5;
+        filter: alpha(opacity = 50);
+        &.current{
+            opacity: 1;
+            filter: alpha(opacity = 100);
+        }
+        
+    }
+    
+}
+
+//图文列表
+.list-info{
+    padding: 0 45px;
+    figure{
+        float: left;
+        width: 33.33333%;
+        padding: 25px;
+        box-sizing: border-box;
+        
+
+        image{
+            width: 100%;
+        }
+        
+        figcaption{
+            margin-top: 21px;
+            margin-bottom: 11px;
+            padding-bottom: 12px;
+
+            font-size: 18px;
+            font-weight: lighter;
+            border-bottom: solid 1px #d9d9d9;
+
+            color:$text-main ;
+
+        }
+        p{
+            line-height: 22px;
+            color:$text-gray ;
+        }
+            
+        
+    }
+    .more-link{
+        display: block;
+        width: 108px;
+        height: 35px;
+        border: solid 1px #f2f2f2;
+        margin: 55px auto 90px;
+        line-height: 37px;
+        color:$text-gray;
+        text-align: center;
+        border-radius: 100px;
+        transition: all .5s ease 0s;
+        &:hover{
+            background-color:$color-main ;
+            color: #fff;
+            border-color:$color-main ;
+        }
+    }
+}
+
+// 朗朗公益
+.welfare{
+    header{
+        background-color: #efefef;
+        
+    }
+    margin-bottom: 90px;
+}
+
+.welfare-wrap{
+    display: flex;
+    height: 570px;
+    .row{
+        flex: 1;
+    }
+    .content-flex{
+        display: flex;
+        height:100%;
+        flex-direction: column;
+    }
+    .content-flex-big{
+        flex: 2;
+    }
+    .content-flex-small{
+        flex: 1;
+    }
+    img{
+        display: block;
+    }
+    .content-dec{
+        padding:38px 48px 0 40px;
+        .title{
+            font-size: 24px;
+        }
+        time{
+            opacity: 50%;
+            filter:alpha(opacity = 50);
+            display: block;
+            padding: 14px 0 20px;
+        }
+        .line{
+            display: block;
+            width: 38px;
+            border-top: 1px solid #cccccc;
+        }
+        .dec{
+            margin-top: 33px;
+            line-height: 24px;
+        }
+        .link-more{
+            margin-top: 16px;
+        }
+    }
+    .color-white{
+        .title ,time ,.dec,.link-more{
+            color: #fff;
+            
+            }
+            .link-more{
+                border-color: #fff;
+        }
+    }
+    
+}
+
+.doctor{
+    padding: 90px 0 ;
+    background-color: #f6f6f6;
+
+    .img{
+        float: left;
+    }
+    .content{
+        margin-left: 565px;
+    }
+    .swiper-pagination{
+        left: 0;
+        right: 0;
+        top: 57px;
+        span{
+            margin: 0 3px;
+        }
+    }
+    .swiper-pagination-bullet{
+        width: 8px;
+        height: 3px;
+        border-radius: 0;
+        background-color: #a0a0a0;
+        opacity: 1;
+        filter: alpha(opacity = 100);
+    }
+    .swiper-pagination-bullet-active{
+        background-color: #000000;
+    }
+}
+
+.doctor-info{
+    color: $text-gray;
+    .title{
+        margin-bottom: 16px;
+        color: $text-main;
+        font-size: 18px;
+    }
+    span{
+        display: block;
+        padding: 16px 0 19px 0;
+    }
+    .line{
+        display: block;
+        height: 1px;
+        width: 38px;
+        margin-bottom: 31px;
+        background-color: #c5c5c5;
+    }
+    a{
+        display: block;
+        margin-top: 31px;
+        border: none;
+    }
+}
+
+
+//news-wrap
+.news-wrap{
+    overflow: hidden;
+    .box{
+        margin-left: -15px;
+        margin-right: -15px;
+        // box-sizing: border-box;
+    }
+    padding-bottom: 102px;
+    .item{
+        box-sizing: border-box;
+        float: left;
+        width: 25%;
+        padding:0 15px
+    }
+    img{
+        width: 100%;
+        display: block;
+    }
+    .title{
+        padding-top: 26px;
+        font-size: 18px;
+        @include ell(1)
+    }
+    time{
+        display: block;
+        color: $text-gray;
+        padding: 12px 0;
+    }
+    .line{
+        display: block;
+        width: 50px;
+        height: 1px;
+        background-color: $text-gray;
+        
+    }
+    .dec{
+        padding-top: 15px;
+        margin-bottom: 22px;
+        line-height: 22px;
+        color: $text-gray;
+        @include ell(2)
+    }
+
+}
+
+.news-list{
+    .item{
+        padding-bottom: 40px;
+        margin-bottom: 40px;
+        border-bottom: 1px solid #f1f1f1;
+    }
+}
+
+.content-wrap{
+    .info{
+        float: left;
+        padding-top: 37px;
+        width: 400px;
+        background-color: #f9f9f9;
+        text-align: center;
+        padding-bottom: 37px;
+    }
+    .title{
+        font-size: 24px;
+        margin-bottom: 29px;
+    }
+    .tel{
+        display: inline-block;
+        background-color: $color-main;
+        color: #fff;
+        margin-top: 10px;
+        margin-bottom: 29px;
+        font-size: 18px;
+        line-height: 44px;
+        border-radius: 50px;
+        padding: 0 15px;
+    }
+    span{
+        display: block;
+    }
+    strong{
+        color: $color-main;
+    }
+    p{
+        margin-bottom: 20px;
+        line-height: 20px;
+    }
+}
+
+
+.message-form{
+    margin-top: 100px;
+    margin-left: 500px;
+    .title{
+        text-align: center;
+        font-size: 18px;
+        line-height: 85px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
